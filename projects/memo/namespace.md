@@ -18,12 +18,12 @@ resources :コントローラー名 には、namespace :コントローラー名
 adminsコントローラー(管理者側のコントローラー)で<br>
 同じ名前のコントローラー(items)があった場合
 
-namespace :customers do
-  resources :items
-end
+namespace :customers do<br>
+  resources :items<br>
+end<br>
 
-namespace :admins do
-  resources :items
-end
+namespace :admins do<br>
+  resources :items<br>
+end<br>
 
 
