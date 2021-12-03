@@ -40,3 +40,13 @@ protected<br>
 
 protectedの後に↑上記を記述しておく事で、<br>
 セキュリティー対策にもなり、カラムの認証も出来るようになる<br>
+
+〜ログイン時に別のカラムで認証する場合〜<br>
+
+config/initializer/devise.rbに↓以下の内容を記述<br>
+
+config.authentication_keys = [:カラム名]<br>
+
+例:config.authentication_keys = [:name]<br>
+
+↑これは、nameカラムを認証したいカラムとしている。
