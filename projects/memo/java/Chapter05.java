@@ -9,6 +9,7 @@
 プリミティブ型だと「みかん」が直接入っている事になり、
 参照型だと番地(今回は200番地とする)に「みかん」という文字データが
 入っている事になる。
+プリミティブ型は小文字で表し、ラッパークラス型は先頭が大文字になる。
 
 null…データが存在しない事。参照型の変数にnullを入れるとエラーになる。
 
@@ -26,12 +27,12 @@ public class Chapter05 {
 	public static void main(String[] args) {
 		
 		//プリミティブ型変数宣言と初期化
-		long long1 = 9223372036854775807L;
+		long long1 = 9223372036854775807L;　//longを使う場合は値の最後にLをつける
 		double double1 = 123.12;
 		boolean boolean1 = true;
 		
 		//ラッパークラス変数宣言と初期化
-		Float float1 = 0.123f;
+		Float float1 = 0.123f;　//floatを使う場合は値の最後にfをつける
 		Integer int1 = 1;
 		Character char1 = 'あ';
 		
