@@ -63,7 +63,7 @@
    System.out.println(c + d); 結果:100200
 */
 
-public class Chapter06 {
+public class operator {
 	public static void main(String[] args) {
 		
 		int val = 2 + 5;

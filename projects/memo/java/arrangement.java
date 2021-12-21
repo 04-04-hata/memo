@@ -43,16 +43,16 @@ null…データが存在しない事。参照型の変数にnullを入れると
 0番が10で4番が50になる。
 */
 
-public class Chapter05 {
+public class arrangement {
 	public static void main(String[] args) {
 		
 		//プリミティブ型変数宣言と初期化
-		long long1 = 9223372036854775807L;　//longを使う場合は値の最後にLをつける
+		long long1 = 9223372036854775807L; //longを使う場合は値の最後にLをつける
 		double double1 = 123.12;
 		boolean boolean1 = true;
 		
 		//ラッパークラス変数宣言と初期化
-		Float float1 = 0.123f;　//floatを使う場合は値の最後にfをつける
+		Float float1 = 0.123f; //floatを使う場合は値の最後にfをつける
 		Integer int1 = 1;
 		Character char1 = 'あ';
 		

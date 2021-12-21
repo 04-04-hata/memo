@@ -43,7 +43,7 @@ breakとは、case内の処理を終わらせる命令文の事。
 一度breakが起動すればswitch文は強制終了となる。
 */
 
-public class Chapter07 {
+public class Bifurcation {
   public static void main(String[] args) {
     int distance = 17;
 
