@@ -56,14 +56,14 @@ public class Human04 {<br>
 		
 		static public void staticMethodPrint() {
 			//staticメソッドからインスタンス変数は使用できない(コンパイルエラー)
-			//System.out.println("名前は、" + name);
+			//System.out.print("名前は、" + name);
 			//static変数のhumanCountを表示
-			System.out.println("人の数は" + Human04.humanCount);
+			System.out.print("人の数は" + Human04.humanCount);
 		}
 		
 		public void instanceMethodPrint() {
 			//インスタンス変数のnameを表示
-			System.out.println("名前は" + name);
+			System.out.print("名前は" + name);
 		}
 
 }<br>
@@ -84,11 +84,11 @@ public class ClassMethod04 {<br>
         Human04.staticMethodPrint();
 
         // staticなクラス定数もインスタンスを生成せずに参照できる
-        System.out.println(Human04.GREETING);
+        System.out.print(Human04.GREETING);
 
         // インスタンスメンバーは直接使用できない（コンパイルエラーになる）
         // Human04.instanceMethodPrint();
-        // System.out.println(Human04.name);
+        // System.out.print(Human04.name);
 
         // インスタンスメンバーはインスタンス生成してから使用する
         yamada.instanceMethodPrint();
