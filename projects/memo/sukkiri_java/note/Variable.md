@@ -16,25 +16,25 @@
 
 〜型の種類〜
 
-整数型
-byte…とても小さな整数。変数宣言の例:byte 変数名;
-short…小さな整数。変数宣言の例:short 変数名;
-int…普通の整数。変数宣言の例:int 変数名;
-long…大きな整数。変数宣言の例:long 変数名;
+整数型<br>
+byte…とても小さな整数。変数宣言の例:byte 変数名;<br>
+short…小さな整数。変数宣言の例:short 変数名;<br>
+int…普通の整数。変数宣言の例:int 変数名;<br>
+long…大きな整数。変数宣言の例:long 変数名;<br>
 
-小数
-float…浮動小数点。変数宣言の例:float 変数名;
-double…普通の小数。変数宣言の例:double 変数名;
+小数<br>
+float…浮動小数点。変数宣言の例:float 変数名;<br>
+double…普通の小数。変数宣言の例:double 変数名;<br>
 
-真偽値
-boolean…trueかfalse。変数宣言の例:boolean 変数名;
+真偽値<br>
+boolean…trueかfalse。変数宣言の例:boolean 変数名;<br>
 
-文字
-char…一つの文字。変数宣言の例:char 変数名;
+文字<br>
+char…一つの文字。変数宣言の例:char 変数名;<br>
 
-文字列
-String…文字の並び。変数宣言の例:String 変数名;
+文字列<br>
+String…文字の並び。変数宣言の例:String 変数名;<br>
 
-定数…上書き不可のデータ。
-final 型 定数名 = 初期値;で定義。
-定数名には全て大文字を用いる。
+定数…上書き不可のデータ。<br>
+final 型 定数名 = 初期値;で定義。<br>
+定数名には全て大文字を用いる。<br>
