@@ -36,6 +36,24 @@ While (doorClose == true) {
 例えば、if文のブロック内で宣言した変数は、そのブロックの外側では利用出来ない。このような「変数が利用可能な場所の範囲」の事を
 スコープという。<br>
 
+whileとdo whileの違い<br>
+whileは先に条件式を判定するが、do whileは先にブロックを実行する。
+whileは条件がfalseだった場合何もしないが、do whileは最低一回はブロックが実行される。<br>
+例えば、tempが10だった場合、whileだと一度もブロックが実行されずtempも10のままだが、
+do whileの場合、tempが10でも一回はブロックが実行され、tempが9になる。<br>
+
+例(while)↓<br>
+while(temp > 25) {<br>
+  temp--;
+  System.out.println("温度を一度下げました");<br>
+}<br>
+
+例(do-while)↓<br>
+do {
+  temp--;
+  System.out.println("温度を一度下げました");
+} while (temp > 25);
+
 条件式…if文やwhile文で利用される式の一種で、「処理を分岐する条件」や「ループを続ける条件」を表現するためのもの。
 評価結果がtrueかfalseになるものしか記述できない。<br>
 
