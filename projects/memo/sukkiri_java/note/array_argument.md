@@ -45,3 +45,38 @@ public static void main(String[] args) {<br>
 - 呼び出し先で引数の内容を書き換えても、呼び出し元の変数は変化しない
 
 <br>
+
+〜参照渡しについて〜
+
+参照渡し…引数としてアドレスを渡す事。<br>
+配列をメソッド呼び出しで渡すと、配列の内容{1, 2, 3}では無く配列の先頭要素のアドレスがコピーされ、
+mainメソッド内の変数arrayとprintArrayメソッド内の引数arrayはどちらも配列の先頭要素のアドレス以降にある配列の実体を参照した状態になる。<br>
+
+参照渡しを行うと呼び出し先で加えた変更が呼び出し元にも影響する。<br>
+例として、printArrayメソッド内でarray[0]に100を代入し、printArrayメソッドが終了した後にmainメソッド内でarray[0]を取り出すと、100を取り出すことになる。<br>
+
+配列をメソッド呼び出しで渡すと
+- 呼び出し元の配列のアドレスが、呼び出し先の引数にコピーされる
+- 呼び出し先で配列の実体を書き換えると、呼び出し元(mainメソッド:実行メソッド)にも影響する。
+
+例:戻り値に配列を用いる<br>
+public class Array2 {<br>
+  public static int[] makeArray(int size) { // int型配列を作成して戻すメソッド<br>
+    int[] newArray = new int[size]; // mainメソッドでint[] array = makeArray(3);と指定してるのでnewArrayの要素数は3となる<br>
+    for (int i = 0; i < newArray.length; i++) { // newArrayの要素分繰り返す<br>
+      newArray[i] = i;<br>
+    }// int iが1ならnewArrayのiも1になる<br>
+    return newArray; // 配列を戻す<br>
+  }<br>
+
+  public static void main(String[] args) {<br>
+    int[] array = makeArray(3); // newArrayの要素数は3つと指定してる<br>
+    for (int i : array) {<br>
+      System.out.println(i); // arrayの全要素を出力<br>
+    }<br>
+  }<br>
+}<br>
+
+return newArray;によって配列の先頭要素のアドレスがmainメソッドに戻される。<br>
+mainメソッドでは、それを自身で宣言した配列変数arrayに代入する。<br>
+その結果、makeArrayメソッドで作成された配列を参照出来るようになる。
