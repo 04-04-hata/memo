@@ -75,3 +75,10 @@ clacapp.mainとcalcapp.logicsの全てのクラスをインポートするには
 import clacapp.main.*;<br>
 import clacapp.logics.*;<br>
 としなければならない。<br>
+
+〜パッケージを使っているときのjavaコマンドの正確な構文(実行時)<br>
+java パッケージ名.クラス名<br>
+
+〜パッケージを使うメリット〜
+
+パッケージが異なれば、同じクラス名を使ってもいいというルールだから。<br>
