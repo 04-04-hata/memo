@@ -20,3 +20,15 @@
 public class Hero {<br>
 
 }<br>
+
+属性の宣言
+public class Hero {<br>
+  String name; // 名前の宣言<br>
+  int hp; // HPの宣言<br>
+}<br>
+
+クラスブロック内{}に宣言された変数を、javaではフィールドと言う。<br>
+上記↑では、nameとhpという2つのフィールドの宣言が完了している。<br>
+
+フィールドの宣言
+属性を宣言するにはクラスブロックの中に変数宣言を記述する<br>
