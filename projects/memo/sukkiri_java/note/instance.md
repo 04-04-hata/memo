@@ -26,5 +26,20 @@ public class Buttle {<br>
 }<br>
 
 ここで実際にインスタンスを生成しているのは、右辺のnew Hero()という部分であり、
-=によって生成したインスタンスをHero型変数hに代入している。
+=によって生成したインスタンスをHero型変数hに代入している。<br>
 
+インスタンスのフィールド利用
+生み出されたばかりの勇者hには、名前もHPもまだないのでそれぞれのフィールドに値を代入する。<br>
+勇者hのフィールドに値を代入するには↓以下のような文法を使う<br>
+
+フィールドへの値の代入:変数名.フィールド名 = 値;
+
+public class Buttle {<br>
+  public static void main (String args) {<br>
+  // 勇者を生成<br>
+    Hero h = new Hero(); // Heroクラスからインスタンスを生成し、変数hに入れる<br>
+    h.name = "ミナト"; // 変数hのnameに代入<br>
+    h.hp = 100; // 変数hのhpに代入<br>
+    System.out.println("勇者" + h.name + "を生み出しました!");<br>
+  }<br>
+}<br>
