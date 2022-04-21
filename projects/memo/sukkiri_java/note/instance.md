@@ -40,6 +40,6 @@ public class Buttle {<br>
     Hero h = new Hero(); // Heroクラスからインスタンスを生成し、変数hに入れる<br>
     h.name = "ミナト"; // 変数hのnameに代入<br>
     h.hp = 100; // 変数hのhpに代入<br>
-    System.out.println("勇者" + h.name + "を生み出しました!");<br>
+    System.out.println("勇者" + h.name + "を生み出しました!"); // 変数hのnameを取り出す<br>
   }<br>
 }<br>
