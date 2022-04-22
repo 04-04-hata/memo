@@ -43,3 +43,21 @@ public class Buttle {<br>
     System.out.println("勇者" + h.name + "を生み出しました!"); // 変数hのnameを取り出す<br>
   }<br>
 }<br>
+
+インスタンスのメソッド呼び出し
+勇者に指示を送る = メソッド呼び出し<br>
+
+public class Buttle {<br>
+  public static void main (String args) {<br>
+  // 勇者を生成<br>
+    Hero h = new Hero(); // Heroクラスからインスタンスを生成し、変数hに入れる<br>
+    h.name = "ミナト"; // 変数hのnameに代入<br>
+    h.hp = 100; // 変数hのhpに代入<br>
+    System.out.println("勇者" + h.name + "を生み出しました!"); // 変数hのnameを取り出す<br>
+    // 勇者のメソッドを呼び出していく<br>
+    h.sit(5); // 5秒座れ<br>
+    h.slip(); // 転べ<br>
+    h.sit(25); // 25秒座れ<br>
+    h.run(); // 走れ<br>
+  }<br>
+}<br>
