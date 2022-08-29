@@ -101,3 +101,34 @@ h2.hp = 200; 意味:変数h2の中身(3922)が指す番地にいるインスタ�
 new Hero()した回数が勇者の人数。(今回は一回しかしてないので一人)<br>
 インスタンスの独立性はインスタンスが複数いる場合に成り立つので今回のようにインスタンスが一つ(勇者が一人)の場合は関係ない。<br>
 
+クラス型をフィールドに用いる<br>
+
+例:Sword型フィールドを持つHeroクラス<br>
+
+まず、Swordクラスを定義しておく<br>
+public class Sword {<br>
+  String name; // 剣の名前<br>
+  int damage; // 剣の攻撃力<br>
+}<br>
+
+次にHeroクラスを定義する<br>
+public class Hero {<br>
+  String name;<br>
+  int hp;<br>
+  Sword sword; // 勇者が装備している剣の情報<br>
+  public void attack() {<br>
+    System.out.println(this.name(勇者の名前) + "は攻撃した!");<br>
+    System.out.println("敵に5ポイントのダメージを与えた!");<br>
+  }<br>
+}<br>
+
+Heroクラスに新しく追加されたフィールドSwordは、int型やString型ではなくSword型です。<br>
+このように↑、フィールドにクラス型の変数を宣言することも出来る。<br>
+なお、今回の例のようにあるクラスが別のクラスをフィールドとして利用している関係(上記の例だとSwordクラスがHeroクラスをフィールドとして利用している関係)を
+has-aの関係という。<br>
+
+has-aと呼ぶ理由は↓のような英文が自然に成立するから。<br>
+Hero has-a Sword(勇者は剣を持っている)<br>
+
+
+
