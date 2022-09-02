@@ -130,5 +130,29 @@ has-aの関係という。<br>
 has-aと呼ぶ理由は↓のような英文が自然に成立するから。<br>
 Hero has-a Sword(勇者は剣を持っている)<br>
 
+剣を装備した勇者を生み出す<br>
+
+public class Buttle {<br>
+	public static void main(String[] args) {
+		
+		Sword s = new Sword(); // 剣を生み出す
+	    s.name = "炎の剣";
+	    s.damage = 10;
+	    
+		// 勇者よ、この仮想世界に生まれよ
+		Hero h = new Hero(); // Heroクラスからインスタンスを生成し、変数hに入れる。
+		// 実際にインスタンスを生成しているのはnew Hero()の部分であり、=によって生成したインスタンスを変数hに代入している
+		h.name = "ミナト"; // 変数hのnameに代入
+	    h.hp = 100; // 変数hのhpに代入
+	    h.sword = s; //swordフィールドに生成済みの剣インスタンス(の番地)を代入
+	    System.out.println("現在の武器は" + h.sword.name); // h.sword.nameは勇者「の」剣「の」名前
+	}
+}<br>
+
+822番地にある変数hには、勇者インスタンスのアドレス情報(1011番地)が入っている。<br>
+そして勇者インスタンスに含まれるsword領域には、剣インスタンスのアドレス情報(2465番地)が
+格納されている。<br>
+すなわち先ほどの「Hero has-a Sword」の関係が成立しており、HeroクラスがSwordクラスをフィールドとして利用している事がわかる。<br>
+
 
 
