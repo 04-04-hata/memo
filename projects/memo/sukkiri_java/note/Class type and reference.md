@@ -154,5 +154,42 @@ public class Buttle {<br>
 格納されている。<br>
 すなわち先ほどの「Hero has-a Sword」の関係が成立しており、HeroクラスがSwordクラスをフィールドとして利用している事がわかる。<br>
 
+クラス型をメソッド引数や戻り値に用いる<br>
+
+クラス型はフィールドの型として用いる事が出来るだけではなく、メソッドの引数や戻り値の型として利用することも出来る。<br>
+例:既にある勇者クラスに加え、魔法使い(Wizard)のクラスを作る<br>
+
+魔法使いは勇者のHPを回復させる魔法(heal)を使う事が出来る<br>
+
+public class Wizard {<br>
+  String name; // 魔法使いの名前<br>
+  int hp; // 魔法使いのHP<br>
+  public void heal(Hero h) { // 引数はHero型<br>
+    h.hp += 10; // 勇者のHPに10を加える(10回復する)<br>
+    System.out.println(h.name + "のHPを10回復した!");<br>
+  }<br>
+}<br>
+
+healメソッドが呼び出されると、魔法使いインスタンスは勇者のHPを10回復させる。<br>
+ただし、仮想世界には勇者が二人以上生み出されている(2回以上newされている)可能性もあるから、
+呼び出される時に「どの勇者を回復させるのか」を引数hとして受け取る必要がある(public void heal(Hero h)の所)<br>
+実際にこのWizardクラスを利用したプログラムは以下↓のようになる。<br>
+
+public class Battle {<br>
+  public static void main(String args) {<br>
+    Hero h1 = new Hero(); // 一人目の勇者作成<br>
+    h1.name = "ミナト "; // 一人目の勇者の名前<br>
+    h1.hp = 100; // 一人目の勇者のhp<br>
+    Hero h2 = new hero(); // 二人目の勇者誕生<br>
+    h2.name = "アサカ"; // 二人目の勇者の名前<br>
+    h2.hp = 100; // 二人目の勇者のHP<br>
+    Wizard w = new Wizard(); // 魔法使い誕生<br>
+    w.name = "スガワラ"; // 魔法使いの名前<br>
+    w.hp = 50; // 魔法使いのHP<br>
+    w.heal(h1); // h1(ミナト)のHPを10回復(100 + 10 = 110)<br>
+    w.heal(h2); // h2(アサカ)のHPを10回復(100 + 10 = 110)<br>
+    w.heal(h2); // h2(アサカ)のHPを10回復(110 + 10 = 120)<br>
+  }<br>
+}<br>
 
 
